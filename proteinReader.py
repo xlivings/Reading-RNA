@@ -1,8 +1,6 @@
 # This py file will read a DNA sequence, then make an RNA sequence that will make the proteins
 # todo try to find a way to figure out what protein is built
 
-read = open("sequence.txt")
-sequence = read.read()
 aminoAcids = {"UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L", "CUU": "L", "CUC": "L", "CUA": "L", "CUG": "L",
               "AUU": "I", "AUC": "I", "AUA": "I", "AUG": "M", "GUU": "V", "GUC": "V", "GUA": "V", "GUG": "V",
               "UCU": "S", "UCC": "S", "UCA": "S", "UCG": "S", "CCU": "P", "CCC": "P", "CCA": "P", "CCG": "P",
@@ -11,4 +9,8 @@ aminoAcids = {"UUU": "F", "UUC": "F", "UUA": "L", "UUG": "L", "CUU": "L", "CUC":
               "AAU": "N", "AAC": "N", "AAA": "K", "AAG": "K", "GAU": "D", "GAC": "D", "GAA": "E", "GAG": "E",
               "UGU": "C", "UGC": "C", "UGA": "STOP", "UGG": "W", "CGU": "R", "CGC": "R", "CGA": "R", "CGG": "R",
               "AGU": "S", "AGC": "S", "AGA": "R", "AGG": "R", "GGU": "G", "GGC": "G", "GGA": "G", "GGG": "G"}
+read = open("sequence.txt")
+sequence = read.read()
+sequence.replace("\n", "")
+sequence.replace("\r", "")
 read.close()
