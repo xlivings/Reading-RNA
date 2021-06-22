@@ -13,4 +13,14 @@ read = open("sequence.txt")
 sequence = read.read()
 sequence.replace("\n", "")
 sequence.replace("\r", "")
+rna = ""
+for letter in sequence:
+    if letter == 'A':
+        rna = rna + "U"
+    elif letter == 'T':
+        rna = rna + "A"
+    elif letter == 'C':
+        rna = rna + "G"
+    elif letter == 'G':
+        rna = rna + "C"
 read.close()
