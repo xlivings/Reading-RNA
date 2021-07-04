@@ -31,4 +31,10 @@ for letter in sequence:
     elif letter == 'G':
         rna = rna + "C"
 
+length = len(rna)
+for letters in range(0, length, 3):
+    acid = rna[letters]
+    acid = acid + rna[letters + 1]
+    acid = acid + rna[letters + 2]
+    print aminoAcids[acid]
 read.close()
